@@ -14,6 +14,12 @@
 		99880F8C249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99880F8A249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld */; };
 		99880F8E249DED8A00DC2B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99880F8D249DED8A00DC2B37 /* Assets.xcassets */; };
 		99880F91249DED8A00DC2B37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99880F8F249DED8A00DC2B37 /* LaunchScreen.storyboard */; };
+		99880F9C249DF20D00DC2B37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9B249DF20D00DC2B37 /* Model.swift */; };
+		99880F9E249DF3B400DC2B37 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9D249DF3B400DC2B37 /* MemoListTableViewController.swift */; };
+		99880FA0249DFF1C00DC2B37 /* NewMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9F249DFF1C00DC2B37 /* NewMemoViewController.swift */; };
+		99880FA2249E00E800DC2B37 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA1249E00E800DC2B37 /* UIViewController+Alert.swift */; };
+		99880FA4249E2B3900DC2B37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA3249E2B3900DC2B37 /* DetailViewController.swift */; };
+		99880FA7249E37FF00DC2B37 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA6249E37FF00DC2B37 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		99880F8D249DED8A00DC2B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99880F90249DED8A00DC2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99880F92249DED8A00DC2B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99880F9B249DF20D00DC2B37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		99880F9D249DF3B400DC2B37 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
+		99880F9F249DFF1C00DC2B37 /* NewMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemoViewController.swift; sourceTree = "<group>"; };
+		99880FA1249E00E800DC2B37 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		99880FA3249E2B3900DC2B37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		99880FA6249E37FF00DC2B37 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +70,15 @@
 		99880F80249DED8A00DC2B37 /* YouairyMemo */ = {
 			isa = PBXGroup;
 			children = (
+				99880FA5249E37EF00DC2B37 /* Data */,
+				99880F98249DF17800DC2B37 /* Model */,
 				99880F81249DED8A00DC2B37 /* AppDelegate.swift */,
 				99880F83249DED8A00DC2B37 /* SceneDelegate.swift */,
 				99880F85249DED8A00DC2B37 /* ViewController.swift */,
+				99880F9D249DF3B400DC2B37 /* MemoListTableViewController.swift */,
+				99880F9F249DFF1C00DC2B37 /* NewMemoViewController.swift */,
+				99880FA1249E00E800DC2B37 /* UIViewController+Alert.swift */,
+				99880FA3249E2B3900DC2B37 /* DetailViewController.swift */,
 				99880F87249DED8A00DC2B37 /* Main.storyboard */,
 				99880F8D249DED8A00DC2B37 /* Assets.xcassets */,
 				99880F8F249DED8A00DC2B37 /* LaunchScreen.storyboard */,
@@ -68,6 +86,22 @@
 				99880F8A249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld */,
 			);
 			path = YouairyMemo;
+			sourceTree = "<group>";
+		};
+		99880F98249DF17800DC2B37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99880F9B249DF20D00DC2B37 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99880FA5249E37EF00DC2B37 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				99880FA6249E37FF00DC2B37 /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +175,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99880FA4249E2B3900DC2B37 /* DetailViewController.swift in Sources */,
+				99880FA7249E37FF00DC2B37 /* DataManager.swift in Sources */,
+				99880F9C249DF20D00DC2B37 /* Model.swift in Sources */,
 				99880F8C249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld in Sources */,
 				99880F86249DED8A00DC2B37 /* ViewController.swift in Sources */,
 				99880F82249DED8A00DC2B37 /* AppDelegate.swift in Sources */,
 				99880F84249DED8A00DC2B37 /* SceneDelegate.swift in Sources */,
+				99880F9E249DF3B400DC2B37 /* MemoListTableViewController.swift in Sources */,
+				99880FA0249DFF1C00DC2B37 /* NewMemoViewController.swift in Sources */,
+				99880FA2249E00E800DC2B37 /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
