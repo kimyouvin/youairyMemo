@@ -23,12 +23,38 @@ class DataManager
     
     var memoList = [Memo]()
     
+    func addNewMemo(_ memo:String?)
+    {
+        let newMemo = Memo(context: mainContext)
+        newMemo.content = memo
+        newMemo.date = Date()
+        memoList.insert(newMemo, at: 0)
+        saveContext()
+    }
+    
+    func deleteMemo (_ memo:Memo?)
+    {
+        if let memo = memo {
+            mainContext.delete(memo)
+            saveContext()
+        }
+    }
+    
     func fetchMemo()
     {
         let request : NSFetchRequest<Memo> = Memo.fetchRequest()
         
         let sortByDateDesc = NSSortDescriptor(key: "date", ascending: false)
         request.sortDescriptors = [sortByDateDesc]
+        
+        do {
+            memoList = try mainContext.fetch(request)
+            
+        }
+        catch{
+            print(error)
+        }
+        
     }
     
     // MARK: - Core Data stack
