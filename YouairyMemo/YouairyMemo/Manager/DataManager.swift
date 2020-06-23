@@ -12,8 +12,9 @@ import CoreData
 class DataManager
 {
     
-    static let shared = DataManager()
-    private init() { // 싱글톤
+    static let shared = DataManager() // 싱글톤
+    
+    private init() {
         
     }
     

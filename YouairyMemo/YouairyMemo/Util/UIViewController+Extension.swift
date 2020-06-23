@@ -1,5 +1,5 @@
 //
-//  UIViewController+Alert.swift
+//  UIViewController+Extension.swift
 //  YouairyMemo
 //
 //  Created by Youvin Fairy on 20/06/2020.
@@ -16,4 +16,5 @@ extension UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+    
 }
