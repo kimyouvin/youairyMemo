@@ -24,11 +24,12 @@ class DataManager
     
     var memoList = [Memo]()
     
-    func addNewMemo(_ memo:String?)
+    func addNewMemo(text:String?, imagePath:String?)
     {
         let newMemo = Memo(context: mainContext)
-        newMemo.content = memo
+        newMemo.content = text
         newMemo.date = Date()
+        newMemo.imagePath = imagePath
         memoList.insert(newMemo, at: 0)
         saveContext()
     }

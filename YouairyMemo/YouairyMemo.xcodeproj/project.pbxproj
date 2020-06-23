@@ -11,12 +11,13 @@
 		990DAF3B24A075660035A860 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DAF3A24A075660035A860 /* BaseViewController.swift */; };
 		990DAF3D24A1D5B90035A860 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DAF3C24A1D5B90035A860 /* FeedTableViewCell.swift */; };
 		990DAF3F24A1E4D10035A860 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DAF3E24A1E4D10035A860 /* UIImage+Extension.swift */; };
+		990DAF4124A202A20035A860 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DAF4024A202A10035A860 /* URL+Extension.swift */; };
 		99880F82249DED8A00DC2B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F81249DED8A00DC2B37 /* AppDelegate.swift */; };
 		99880F89249DED8A00DC2B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99880F87249DED8A00DC2B37 /* Main.storyboard */; };
 		99880F8C249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99880F8A249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld */; };
 		99880F8E249DED8A00DC2B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99880F8D249DED8A00DC2B37 /* Assets.xcassets */; };
 		99880F91249DED8A00DC2B37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99880F8F249DED8A00DC2B37 /* LaunchScreen.storyboard */; };
-		99880F9E249DF3B400DC2B37 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9D249DF3B400DC2B37 /* MemoListViewController.swift */; };
+		99880F9E249DF3B400DC2B37 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9D249DF3B400DC2B37 /* FeedListViewController.swift */; };
 		99880FA0249DFF1C00DC2B37 /* UploadFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9F249DFF1C00DC2B37 /* UploadFeedViewController.swift */; };
 		99880FA2249E00E800DC2B37 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA1249E00E800DC2B37 /* UIViewController+Extension.swift */; };
 		99880FA4249E2B3900DC2B37 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA3249E2B3900DC2B37 /* MemoDetailViewController.swift */; };
@@ -28,6 +29,7 @@
 		990DAF3A24A075660035A860 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		990DAF3C24A1D5B90035A860 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		990DAF3E24A1E4D10035A860 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		990DAF4024A202A10035A860 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		99880F7E249DED8A00DC2B37 /* YouairyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouairyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99880F81249DED8A00DC2B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99880F88249DED8A00DC2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +37,7 @@
 		99880F8D249DED8A00DC2B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99880F90249DED8A00DC2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99880F92249DED8A00DC2B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99880F9D249DF3B400DC2B37 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		99880F9D249DF3B400DC2B37 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
 		99880F9F249DFF1C00DC2B37 /* UploadFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFeedViewController.swift; sourceTree = "<group>"; };
 		99880FA1249E00E800DC2B37 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		99880FA3249E2B3900DC2B37 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				990DAF3A24A075660035A860 /* BaseViewController.swift */,
-				99880F9D249DF3B400DC2B37 /* MemoListViewController.swift */,
+				99880F9D249DF3B400DC2B37 /* FeedListViewController.swift */,
 				99880F9F249DFF1C00DC2B37 /* UploadFeedViewController.swift */,
 				99880FA3249E2B3900DC2B37 /* MemoDetailViewController.swift */,
 				990DAF3C24A1D5B90035A860 /* FeedTableViewCell.swift */,
@@ -79,6 +81,7 @@
 				990DAF3824A0751F0035A860 /* Util.swift */,
 				99880FA1249E00E800DC2B37 /* UIViewController+Extension.swift */,
 				990DAF3E24A1E4D10035A860 /* UIImage+Extension.swift */,
+				990DAF4024A202A10035A860 /* URL+Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -199,8 +202,9 @@
 				99880F8C249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld in Sources */,
 				99880F82249DED8A00DC2B37 /* AppDelegate.swift in Sources */,
 				990DAF3924A0751F0035A860 /* Util.swift in Sources */,
+				990DAF4124A202A20035A860 /* URL+Extension.swift in Sources */,
 				990DAF3B24A075660035A860 /* BaseViewController.swift in Sources */,
-				99880F9E249DF3B400DC2B37 /* MemoListViewController.swift in Sources */,
+				99880F9E249DF3B400DC2B37 /* FeedListViewController.swift in Sources */,
 				99880FA0249DFF1C00DC2B37 /* UploadFeedViewController.swift in Sources */,
 				99880FA2249E00E800DC2B37 /* UIViewController+Extension.swift in Sources */,
 				990DAF3F24A1E4D10035A860 /* UIImage+Extension.swift in Sources */,

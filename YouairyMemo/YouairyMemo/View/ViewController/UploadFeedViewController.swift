@@ -50,22 +50,29 @@ class UploadFeedViewController: BaseViewController, UIImagePickerControllerDeleg
     
     @IBAction func save(_ sender: Any)
     {
-        guard let memo = memoTextView.text,
-            memo.count > 0 else {
-                alert(message: "메모를 입력하세요")
+        guard let text = memoTextView.text,
+            text.count > 0 else {
+                alert(message: "텍스트를 입력하세요")
                 return
         }
         
-        if let target = editTarget
+        guard let path = imagePath,
+            path.count > 0 else {
+                alert(message: "사진을 선택하세요")
+                return
+        }
+        
+        if let target = editTarget // 피드 수정
         {
-            target.content = memo
+            target.content = text
+            target.imagePath = imagePath
             DataManager.shared.saveContext()
             
             NotificationCenter.default.post(name:UploadFeedViewController.memoDidChange, object: nil)
         }
-        else
+        else // 새 피드
         {
-            DataManager.shared.addNewMemo(memo)
+            DataManager.shared.addNewMemo(text:text, imagePath: imagePath)
             NotificationCenter.default.post(name:UploadFeedViewController.newMemoDidInsert, object: nil)
         }
         
@@ -93,18 +100,17 @@ class UploadFeedViewController: BaseViewController, UIImagePickerControllerDeleg
         dismiss(animated: true, completion: { [weak self] in
             guard let self = self else { return }
             guard let pickedImage = info[.originalImage] as? UIImage else { return }
+            
             // 원본 저장
             self.imagePath = pickedImage.filePathCreate()
             
             let originalImage: UIImage = pickedImage.getOriginalImage()
-//                        let originalImage: UIImage = pickedImage
 //
             self.imagePath = originalImage.filePathCreate()
             self.uploadImageView.contentMode = .scaleToFill
             self.uploadImageView.image = originalImage
             
             // 이미지가 등록된 시점
-//            self.imageDeleteButton.isHidden = false
             self.imageSelectButton.isHidden = true
             self.uploadImageView.isHidden = false
         })

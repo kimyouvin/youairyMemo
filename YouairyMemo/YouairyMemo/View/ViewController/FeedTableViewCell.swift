@@ -18,14 +18,19 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var cellView: UIView!                // cell view
     @IBOutlet weak var shadowView: UIView!              // 그림자 뷰
     
-    // 올린 사람 정보
+    // 업로드 정보
     @IBOutlet weak var profileImageView: UIImageView!   // 프로필 이미지
     @IBOutlet weak var profileNameLabel: UILabel!       // 프로필 이름
     @IBOutlet weak var uploadTimeLabel: UILabel!        // 업로드 시간
     
-    // 피드 내용
+    // 피드 영역
     @IBOutlet weak var thumbnailImageView: UIImageView! // 썸네일 이미지
     @IBOutlet weak var contentLabel: UILabel!           // 피드 내용
+    
+    // 버튼
+    @IBOutlet weak var shareButton: UIButton!           // 공유하기
+    @IBOutlet weak var editButton: UIButton!            // 수정하기
+    @IBOutlet weak var trashButton: UIButton!           // 삭제하기
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,8 +46,6 @@ class FeedTableViewCell: UITableViewCell {
     
     // MARK: - init
     func initMemoCell() {
-        // 셀 선택 시 스타일
-        //selectionStyle = .none
         
         // 이미지 contentMode
         thumbnailImageView.contentMode = .scaleAspectFill
@@ -75,11 +78,12 @@ class FeedTableViewCell: UITableViewCell {
 //            contentLabel.text = ""
 //        }
         
-        
-//        if let url = URL.loadFilePath(imageName: info.memoMediaPath) {
+        // youvin image caching , url에서 이미지 다운로드 받아 사용하는 예제 넣기 . king fisher 찾아보자.
+//        if let url = URL.loadFilePath(imageName: memo.imagePath?) {
 //            let provider = LocalFileImageDataProvider(fileURL: url)
-//            thumbnailImageView.kf.setImage(with: provider)
+//            thumbnailImageView.image =
 //        }
     }
+    
 
 }

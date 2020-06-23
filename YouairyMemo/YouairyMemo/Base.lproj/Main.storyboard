@@ -11,7 +11,7 @@
         <!--Youairy Memo-->
         <scene sceneID="4rC-DB-Zp5">
             <objects>
-                <viewController storyboardIdentifier="MemoListViewController" id="sqU-8W-syB" customClass="MemoListViewController" customModule="YouairyMemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedListViewController" id="sqU-8W-syB" customClass="FeedListViewController" customModule="YouairyMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="12T-pb-0yi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,9 +143,12 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="YHa-f2-d6b" id="QyZ-Co-JWX"/>
+                                            <outlet property="editButton" destination="Ctk-ex-B63" id="qev-WH-QwD"/>
                                             <outlet property="profileImageView" destination="Wp9-qa-gZ2" id="7ZE-Dz-Gad"/>
                                             <outlet property="profileNameLabel" destination="ax5-5B-vlJ" id="hfb-gZ-6jX"/>
+                                            <outlet property="shareButton" destination="UBb-6m-hWG" id="dh9-wG-4j1"/>
                                             <outlet property="thumbnailImageView" destination="rjY-cG-PTX" id="XcO-vU-qAG"/>
+                                            <outlet property="trashButton" destination="z2u-vw-mHA" id="NJc-sN-V0a"/>
                                             <outlet property="uploadTimeLabel" destination="REx-PQ-g7F" id="cQT-sA-ull"/>
                                         </connections>
                                     </tableViewCell>
@@ -186,7 +189,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="C4F-iB-wYT"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="memoListTableView" destination="oAL-X2-UdH" id="1X1-4G-soK"/>
+                        <outlet property="feedTableView" destination="oAL-X2-UdH" id="09p-ZS-qEr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLy-89-Rbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

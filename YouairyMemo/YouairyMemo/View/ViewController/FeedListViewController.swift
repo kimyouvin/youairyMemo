@@ -1,5 +1,5 @@
 //
-//  MemoListViewController.swift
+//  FeedListViewController.swift
 //  YouairyMemo
 //
 //  Created by Youvin Fairy on 20/06/2020.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MemoListViewController: BaseViewController
+class FeedListViewController: BaseViewController
 {
     
-    @IBOutlet weak var memoListTableView: UITableView!
+    @IBOutlet weak var feedTableView: UITableView!
     
     var token : NSObjectProtocol? // Notification token
-
+    
     deinit {
         if let token = token
         {
@@ -26,7 +26,7 @@ class MemoListViewController: BaseViewController
     {
         super.viewDidLoad()
         
-        token = NotificationCenter.default.addObserver(forName: UploadFeedViewController.newMemoDidInsert, object: nil, queue: OperationQueue.main) {[weak self] (noti) in self?.memoListTableView.reloadData() }
+        token = NotificationCenter.default.addObserver(forName: UploadFeedViewController.newMemoDidInsert, object: nil, queue: OperationQueue.main) {[weak self] (noti) in self?.feedTableView.reloadData() }
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -34,14 +34,14 @@ class MemoListViewController: BaseViewController
         super.viewWillAppear(animated)
         
         DataManager.shared.fetchMemo()
-        memoListTableView.reloadData()
+        feedTableView.reloadData()
     }
     
 }
 
 
 // MARK: - Table view
-extension MemoListViewController: UITableViewDelegate, UITableViewDataSource
+extension FeedListViewController: UITableViewDelegate, UITableViewDataSource
 {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -53,6 +53,9 @@ extension MemoListViewController: UITableViewDelegate, UITableViewDataSource
     {
         let feedCell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as! FeedTableViewCell
         feedCell.setFeedCell(memo:DataManager.shared.memoList[indexPath.row])
+        feedCell.trashButton.tag = indexPath.row
+        feedCell.trashButton.addTarget(self, action: #selector(self.actionFeedCellTrash(_:)), for: .touchUpInside)
+        
         
         return feedCell
     }
@@ -81,12 +84,24 @@ extension MemoListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         guard let FeedDetailViewController: FeedDetailViewController = UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "FeedDetailViewController") as? FeedDetailViewController
-                else { return }
+            .instantiateViewController(withIdentifier: "FeedDetailViewController") as? FeedDetailViewController
+            else { return }
         
         FeedDetailViewController.memo = DataManager.shared.memoList[indexPath.row]
         FeedDetailViewController.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(FeedDetailViewController, animated: true)
     }
     
+    
+    @IBAction func actionFeedCellTrash(_ sender: UIButton)
+    {
+        let index = sender.tag
+        let target = DataManager.shared.memoList[index]
+        DataManager.shared.deleteMemo(target)
+        DataManager.shared.memoList.remove(at: index)
+        
+        let indexPath = IndexPath(item: index, section: 0)
+        feedTableView.deleteRows(at: [indexPath], with: .fade)
+        
+    }
 }
