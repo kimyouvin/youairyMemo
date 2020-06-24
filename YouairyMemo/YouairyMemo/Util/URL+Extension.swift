@@ -9,7 +9,10 @@
 import UIKit
 
 extension URL {
-    // 파일 경로 불러오기
+    
+    /*!
+    * @abstract 파일 경로 불러오기
+    */
     static func loadFilePath(imageName: String) -> URL? {
         let fileManager = FileManager.default
         

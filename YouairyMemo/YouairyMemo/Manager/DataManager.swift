@@ -11,38 +11,34 @@ import CoreData
 
 class DataManager
 {
-    
-    static let shared = DataManager() // 싱글톤
-    
-    private init() {
-        
-    }
+    // 싱글톤
+    static let shared = DataManager()
     
     var mainContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
-    var memoList = [Memo]()
+    var feedList = [Memo]()
     
-    func addNewMemo(text:String?, imagePath:String?)
+    func addNewFeed(text:String?, imagePath:String?)
     {
-        let newMemo = Memo(context: mainContext)
-        newMemo.content = text
-        newMemo.date = Date()
-        newMemo.imagePath = imagePath
-        memoList.insert(newMemo, at: 0)
+        let newFeed = Memo(context: mainContext)
+        newFeed.content = text
+        newFeed.date = Date()
+        newFeed.imagePath = imagePath
+        feedList.insert(newFeed, at: 0)
         saveContext()
     }
     
-    func deleteMemo (_ memo:Memo?)
+    func deleteFeed (_ feed:Memo?)
     {
-        if let memo = memo {
-            mainContext.delete(memo)
+        if let feed = feed {
+            mainContext.delete(feed)
             saveContext()
         }
     }
     
-    func fetchMemo()
+    func fetchFeed()
     {
         let request : NSFetchRequest<Memo> = Memo.fetchRequest()
         
@@ -50,7 +46,7 @@ class DataManager
         request.sortDescriptors = [sortByDateDesc]
         
         do {
-            memoList = try mainContext.fetch(request)
+            feedList = try mainContext.fetch(request)
             
         }
         catch{

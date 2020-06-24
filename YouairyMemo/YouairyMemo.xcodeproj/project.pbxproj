@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,15 @@
 		990DAF3D24A1D5B90035A860 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DAF3C24A1D5B90035A860 /* FeedTableViewCell.swift */; };
 		990DAF3F24A1E4D10035A860 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DAF3E24A1E4D10035A860 /* UIImage+Extension.swift */; };
 		990DAF4124A202A20035A860 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DAF4024A202A10035A860 /* URL+Extension.swift */; };
+		9959659924A22C2000E1F78A /* FeedDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959659824A22C2000E1F78A /* FeedDetailTableViewCell.swift */; };
+		9959659D24A2479900E1F78A /* FeedDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959659C24A2479900E1F78A /* FeedDetailHeaderTableViewCell.swift */; };
+		995965A624A24E9000E1F78A /* KakaoMessageTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995965A424A24E9000E1F78A /* KakaoMessageTemplate.framework */; };
+		995965A724A24E9000E1F78A /* KakaoLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995965A524A24E9000E1F78A /* KakaoLink.framework */; };
+		995965AA24A2510F00E1F78A /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995965A824A2510F00E1F78A /* KakaoOpenSDK.framework */; };
+		995965AB24A2510F00E1F78A /* KakaoCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995965A924A2510F00E1F78A /* KakaoCommon.framework */; };
+		995965AE24A25EE500E1F78A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995965AD24A25EE500E1F78A /* ProfileViewController.swift */; };
+		995965B024A2646B00E1F78A /* ProfileFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995965AF24A2646B00E1F78A /* ProfileFeedCollectionViewCell.swift */; };
+		995965B224A2736100E1F78A /* ProfileCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995965B124A2736100E1F78A /* ProfileCollectionViewFlowLayout.swift */; };
 		99880F82249DED8A00DC2B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F81249DED8A00DC2B37 /* AppDelegate.swift */; };
 		99880F89249DED8A00DC2B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99880F87249DED8A00DC2B37 /* Main.storyboard */; };
 		99880F8C249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99880F8A249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld */; };
@@ -20,16 +29,28 @@
 		99880F9E249DF3B400DC2B37 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9D249DF3B400DC2B37 /* FeedListViewController.swift */; };
 		99880FA0249DFF1C00DC2B37 /* UploadFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880F9F249DFF1C00DC2B37 /* UploadFeedViewController.swift */; };
 		99880FA2249E00E800DC2B37 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA1249E00E800DC2B37 /* UIViewController+Extension.swift */; };
-		99880FA4249E2B3900DC2B37 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA3249E2B3900DC2B37 /* MemoDetailViewController.swift */; };
+		99880FA4249E2B3900DC2B37 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA3249E2B3900DC2B37 /* FeedDetailViewController.swift */; };
 		99880FA7249E37FF00DC2B37 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99880FA6249E37FF00DC2B37 /* DataManager.swift */; };
+		F57D3485ED4FE18D8D780581 /* Pods_YouairyMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B1D78039C92656F82D561E /* Pods_YouairyMemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16D005B6AE54D9516E788B1D /* Pods-YouairyMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouairyMemo.debug.xcconfig"; path = "Target Support Files/Pods-YouairyMemo/Pods-YouairyMemo.debug.xcconfig"; sourceTree = "<group>"; };
+		90B1D78039C92656F82D561E /* Pods_YouairyMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouairyMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DAF3824A0751F0035A860 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		990DAF3A24A075660035A860 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		990DAF3C24A1D5B90035A860 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		990DAF3E24A1E4D10035A860 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		990DAF4024A202A10035A860 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		9959659824A22C2000E1F78A /* FeedDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailTableViewCell.swift; sourceTree = "<group>"; };
+		9959659C24A2479900E1F78A /* FeedDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		995965A424A24E9000E1F78A /* KakaoMessageTemplate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoMessageTemplate.framework; path = YouairyMemo/Support/KakaoMessageTemplate.framework; sourceTree = "<group>"; };
+		995965A524A24E9000E1F78A /* KakaoLink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoLink.framework; path = YouairyMemo/Support/KakaoLink.framework; sourceTree = "<group>"; };
+		995965A824A2510F00E1F78A /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = YouairyMemo/Support/KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		995965A924A2510F00E1F78A /* KakaoCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoCommon.framework; path = YouairyMemo/Support/KakaoCommon.framework; sourceTree = "<group>"; };
+		995965AD24A25EE500E1F78A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		995965AF24A2646B00E1F78A /* ProfileFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		995965B124A2736100E1F78A /* ProfileCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		99880F7E249DED8A00DC2B37 /* YouairyMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouairyMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99880F81249DED8A00DC2B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99880F88249DED8A00DC2B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,8 +61,9 @@
 		99880F9D249DF3B400DC2B37 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
 		99880F9F249DFF1C00DC2B37 /* UploadFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFeedViewController.swift; sourceTree = "<group>"; };
 		99880FA1249E00E800DC2B37 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		99880FA3249E2B3900DC2B37 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		99880FA3249E2B3900DC2B37 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		99880FA6249E37FF00DC2B37 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E83531770E20664831B7D0B7 /* Pods-YouairyMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouairyMemo.release.xcconfig"; path = "Target Support Files/Pods-YouairyMemo/Pods-YouairyMemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,28 +71,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995965AB24A2510F00E1F78A /* KakaoCommon.framework in Frameworks */,
+				995965A624A24E9000E1F78A /* KakaoMessageTemplate.framework in Frameworks */,
+				995965AA24A2510F00E1F78A /* KakaoOpenSDK.framework in Frameworks */,
+				F57D3485ED4FE18D8D780581 /* Pods_YouairyMemo.framework in Frameworks */,
+				995965A724A24E9000E1F78A /* KakaoLink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		990DAF3524A067F50035A860 /* ViewController */ = {
+		849B6BD97D89F891FDA59163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				990DAF3A24A075660035A860 /* BaseViewController.swift */,
+				16D005B6AE54D9516E788B1D /* Pods-YouairyMemo.debug.xcconfig */,
+				E83531770E20664831B7D0B7 /* Pods-YouairyMemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		990DAF3524A067F50035A860 /* List */ = {
+			isa = PBXGroup;
+			children = (
 				99880F9D249DF3B400DC2B37 /* FeedListViewController.swift */,
-				99880F9F249DFF1C00DC2B37 /* UploadFeedViewController.swift */,
-				99880FA3249E2B3900DC2B37 /* MemoDetailViewController.swift */,
 				990DAF3C24A1D5B90035A860 /* FeedTableViewCell.swift */,
 			);
-			path = ViewController;
+			path = List;
 			sourceTree = "<group>";
 		};
 		990DAF3624A074060035A860 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				990DAF3524A067F50035A860 /* ViewController */,
+				990DAF3A24A075660035A860 /* BaseViewController.swift */,
+				99880F81249DED8A00DC2B37 /* AppDelegate.swift */,
+				99880F8F249DED8A00DC2B37 /* LaunchScreen.storyboard */,
+				99880F87249DED8A00DC2B37 /* Main.storyboard */,
+				995965AC24A25EA100E1F78A /* Profile */,
+				9959659B24A22C4E00E1F78A /* Upload */,
+				9959659A24A22C3100E1F78A /* Detail */,
+				990DAF3524A067F50035A860 /* List */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,11 +126,50 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		9959659A24A22C3100E1F78A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				99880FA3249E2B3900DC2B37 /* FeedDetailViewController.swift */,
+				9959659824A22C2000E1F78A /* FeedDetailTableViewCell.swift */,
+				9959659C24A2479900E1F78A /* FeedDetailHeaderTableViewCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9959659B24A22C4E00E1F78A /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				99880F9F249DFF1C00DC2B37 /* UploadFeedViewController.swift */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		995965A324A24E7400E1F78A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				99880F92249DED8A00DC2B37 /* Info.plist */,
+				99880F8A249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		995965AC24A25EA100E1F78A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				995965AD24A25EE500E1F78A /* ProfileViewController.swift */,
+				995965AF24A2646B00E1F78A /* ProfileFeedCollectionViewCell.swift */,
+				995965B124A2736100E1F78A /* ProfileCollectionViewFlowLayout.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		99880F75249DED8A00DC2B37 = {
 			isa = PBXGroup;
 			children = (
 				99880F80249DED8A00DC2B37 /* YouairyMemo */,
 				99880F7F249DED8A00DC2B37 /* Products */,
+				849B6BD97D89F891FDA59163 /* Pods */,
+				E0F113ACABEA1C312F80B51D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,15 +184,11 @@
 		99880F80249DED8A00DC2B37 /* YouairyMemo */ = {
 			isa = PBXGroup;
 			children = (
+				99880F8D249DED8A00DC2B37 /* Assets.xcassets */,
 				990DAF3724A074F60035A860 /* Util */,
 				99880FA5249E37EF00DC2B37 /* Manager */,
 				990DAF3624A074060035A860 /* View */,
-				99880F81249DED8A00DC2B37 /* AppDelegate.swift */,
-				99880F8F249DED8A00DC2B37 /* LaunchScreen.storyboard */,
-				99880F87249DED8A00DC2B37 /* Main.storyboard */,
-				99880F8D249DED8A00DC2B37 /* Assets.xcassets */,
-				99880F92249DED8A00DC2B37 /* Info.plist */,
-				99880F8A249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld */,
+				995965A324A24E7400E1F78A /* Support */,
 			);
 			path = YouairyMemo;
 			sourceTree = "<group>";
@@ -126,6 +201,18 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		E0F113ACABEA1C312F80B51D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				995965A924A2510F00E1F78A /* KakaoCommon.framework */,
+				995965A824A2510F00E1F78A /* KakaoOpenSDK.framework */,
+				995965A524A24E9000E1F78A /* KakaoLink.framework */,
+				995965A424A24E9000E1F78A /* KakaoMessageTemplate.framework */,
+				90B1D78039C92656F82D561E /* Pods_YouairyMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99880F95249DED8A00DC2B37 /* Build configuration list for PBXNativeTarget "YouairyMemo" */;
 			buildPhases = (
+				0305A07D0E1814A22AE85AEC /* [CP] Check Pods Manifest.lock */,
 				99880F7A249DED8A00DC2B37 /* Sources */,
 				99880F7B249DED8A00DC2B37 /* Frameworks */,
 				99880F7C249DED8A00DC2B37 /* Resources */,
+				02216DCEF940FAE3FCF20353 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,21 +281,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02216DCEF940FAE3FCF20353 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouairyMemo/Pods-YouairyMemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouairyMemo/Pods-YouairyMemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouairyMemo/Pods-YouairyMemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0305A07D0E1814A22AE85AEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouairyMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		99880F7A249DED8A00DC2B37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99880FA4249E2B3900DC2B37 /* MemoDetailViewController.swift in Sources */,
+				99880FA4249E2B3900DC2B37 /* FeedDetailViewController.swift in Sources */,
+				9959659D24A2479900E1F78A /* FeedDetailHeaderTableViewCell.swift in Sources */,
 				99880FA7249E37FF00DC2B37 /* DataManager.swift in Sources */,
 				99880F8C249DED8A00DC2B37 /* YouairyMemo.xcdatamodeld in Sources */,
 				99880F82249DED8A00DC2B37 /* AppDelegate.swift in Sources */,
 				990DAF3924A0751F0035A860 /* Util.swift in Sources */,
 				990DAF4124A202A20035A860 /* URL+Extension.swift in Sources */,
 				990DAF3B24A075660035A860 /* BaseViewController.swift in Sources */,
+				9959659924A22C2000E1F78A /* FeedDetailTableViewCell.swift in Sources */,
 				99880F9E249DF3B400DC2B37 /* FeedListViewController.swift in Sources */,
+				995965B024A2646B00E1F78A /* ProfileFeedCollectionViewCell.swift in Sources */,
 				99880FA0249DFF1C00DC2B37 /* UploadFeedViewController.swift in Sources */,
 				99880FA2249E00E800DC2B37 /* UIViewController+Extension.swift in Sources */,
+				995965AE24A25EE500E1F78A /* ProfileViewController.swift in Sources */,
+				995965B224A2736100E1F78A /* ProfileCollectionViewFlowLayout.swift in Sources */,
 				990DAF3F24A1E4D10035A860 /* UIImage+Extension.swift in Sources */,
 				990DAF3D24A1D5B90035A860 /* FeedTableViewCell.swift in Sources */,
 			);
@@ -350,15 +486,31 @@
 		};
 		99880F96249DED8A00DC2B37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D005B6AE54D9516E788B1D /* Pods-YouairyMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5283YPPV5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YouairyMemo",
+					"$(PROJECT_DIR)/YouairyMemo/Support",
+				);
 				INFOPLIST_FILE = YouairyMemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = youvin.YouairyMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -369,15 +521,31 @@
 		};
 		99880F97249DED8A00DC2B37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E83531770E20664831B7D0B7 /* Pods-YouairyMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5283YPPV5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YouairyMemo",
+					"$(PROJECT_DIR)/YouairyMemo/Support",
+				);
 				INFOPLIST_FILE = YouairyMemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = youvin.YouairyMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

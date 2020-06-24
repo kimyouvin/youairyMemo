@@ -9,8 +9,13 @@
 import UIKit
 
 extension UIImage {
-    // 이미지 크기 조정: 너비기준!
-    static func resizeWithWidth(image: UIImage, resizeWidth: CGFloat) -> UIImage {
+    
+    
+    /*!
+    * @abstract 너비 기준 이미지 크기 조정
+    */
+    static func resizeWithWidth(image: UIImage, resizeWidth: CGFloat) -> UIImage
+    {
         // 오리지널 이미지 크기
         let originalSize = image.size
         
@@ -18,9 +23,12 @@ extension UIImage {
         let heightRatio = UIScreen.main.bounds.size.height / originalSize.height
         
         var newSize: CGSize
-        if widthRatio > heightRatio {
+        
+        if widthRatio > heightRatio
+        {
             newSize = CGSize(width: originalSize.width * heightRatio, height: originalSize.height * heightRatio)
-        } else {
+        } else
+        {
             newSize = CGSize(width: originalSize.width * widthRatio, height: originalSize.height * widthRatio)
         }
         
@@ -28,10 +36,12 @@ extension UIImage {
         
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
         image.draw(in: rect)
+        
         guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
             print("newImage is nil")
             return UIImage()
         }
+        
         UIGraphicsEndImageContext()
         
         return newImage
@@ -53,7 +63,10 @@ extension UIImage {
         return newImage
     }
     
-    // 이미지 로드
+    
+    /*!
+    * @abstract 파일 이름을 통해 이미지 로드
+    */
     static func loadImage(imageName: String) -> UIImage {
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
         let strPath = documentDirectory.appending("/\(imageName)")
@@ -69,7 +82,10 @@ extension UIImage {
         return UIImage()
     }
     
-    // 파일 경로 생성
+    
+    /*!
+    * @abstract 파일 경로 생성
+    */
     func filePathCreate() -> String {
         var resultImagePath: String = ""
         
